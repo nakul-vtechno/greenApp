@@ -1,0 +1,35 @@
+<div class="header-bar">
+    <table style="width:100%">
+        <tr>
+          <td width="10%" style="padding-left: 16px;padding-top: 16px;">
+              <div (click)="this.navigator.toggleNavigator()">&#9776;</div>
+          </td>
+          <td width="80%" style="text-align: center;padding-top: 16px;">
+            GREENPAP
+          </td>
+          <td width="10%" style="float: right;padding-right: 36px;;padding-top: 16px;">
+            &#x2609;
+          </td>
+        </tr>
+      </table>
+</div>
+
+<div [hidden]="!this.navigator.status()">
+  <span class="navigator-container">
+      <ul>
+          <li><a routerLink="/">HOME</a></li>
+          <li><a routerLink="/faq">FAQ</a></li>
+          <li><a routerLink="/edit">EDIT</a></li>
+          <li><a routerLink="/contact">Contact us</a></li>
+        </ul>
+  </span>
+  <span (click)="this.navigator.closeNavigator()" class="navigator-empty-space"></span>
+</div>
+<!-- <div [hidden]="!this.navigator.status()" class="navigator-container">
+  <ul>
+    <li><a routerLink="/">HOME</a></li>
+    <li><a routerLink="/faq">FAQ</a></li>
+    <li><a routerLink="/edit">EDIT</a></li>
+    <li><a routerLink="/contact">Contact us</a></li>
+  </ul>
+</div> -->

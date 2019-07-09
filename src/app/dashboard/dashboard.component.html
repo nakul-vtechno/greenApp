@@ -1,0 +1,44 @@
+<div class="dashboard-top">
+  <div  *ngIf="currentStep == 1;then step1 else step2"></div>
+  <ng-template #step1>
+    <div class="dashboard-input-container">
+      <p style="color:white;">Welcome to the Awesome!</p>
+      <input class="form-control form-control-lg input-keywords" type="text" placeholder="Enter Keyword" style="width: 70%;"><br />
+      <button type="button" (click)="updateCurrentStep()" class="btn btn-primary btn-lg" style="background-color: #01897C;
+      border-color: #31EDBE;color: #31EDBE;">SEND</button>&nbsp;
+      <button type="button" class="btn btn-secondary btn-lg" style="background-color: #01897C;
+      border-color: #31EDBE;color: #31EDBE;">RECEIVE</button>
+    </div>
+  </ng-template>
+  <ng-template #step2>
+      <div class="dashboard-input-container" >
+        <input class="form-control form-control-md input-keywords" type="number" placeholder="Enter Mobile No." style="width: 70%;" max="10"><span style="text-align:center;color:white;"> - or - </span>
+        <input class="form-control form-control-md input-keywords" type="email" placeholder="Enter Email" style="width: 70%;"><br />
+        <button type="button" class="btn btn-secondary btn-lg" style="background-color: #01897C;
+        border-color: #31EDBE;color: #31EDBE;">CONFIRM</button>
+      </div>
+    </ng-template>
+
+    <br />
+    <!-- <div *ngFor="let item of getsAllKeywords()">
+      {{item.name}}
+    </div> -->
+    <br />
+    <div style="margin-top:32px;text-align: -webkit-center;width: 104%;margin-left: -3px;">
+        <div class="card" style="width: 100%;">
+            <div class="card-header">
+              Your Keywords
+            </div>
+            <ul class="list-group list-group-flush">
+              <li *ngFor="let item of keywords; let i = index" style="text-align: -webkit-left;font-size: x-large;font-weight: 700;" [ngClass]="keywordsOption[i] ? 'options-expanded' : 'options-collapsed'" class="list-group-item"><span style="color:#01897C;" [hidden]="keywordsOption[i]">{{item.name}}</span><span style="font-size: 20px;color: white;font-weight: 500;" [hidden]="!keywordsOption[i]">EDIT | SEND | RECEIVE | DELETE</span><span (click)="showOptions(i)" class="item-options">&#9737;&#9737;&#9737;</span></li>
+              <!-- <li style="text-align: -webkit-left;font-size: x-large;font-weight: 700;" class="list-group-item"><span style="color:forestgreen">{{'+ Create New Keyword'}}</span></li> -->
+            </ul>
+          </div>
+          <div style="padding-top: 16px;">
+            <button type="button" class="btn btn-primary btn-md" style="background-color: white;
+    border-color: #4CAF50;color: #4CAF50;">Create New Keyword</button>
+          </div>
+    </div>
+
+</div>
+

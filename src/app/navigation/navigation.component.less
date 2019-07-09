@@ -1,0 +1,49 @@
+.navigator-container{
+  display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    background-color: #222222;
+    left: 0px;
+    top: 0px;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-name: slidein;
+    animation-name: slidein;
+    z-index: 9999;
+}
+
+.navigator-empty-space{
+  display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background-color: none;
+    right: 0px;
+    top: 0px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.header-bar{
+  margin-top: -10px;
+  margin-right: -10px;
+  margin-left: -10px;
+  padding-bottom:10px;
+  color: white;
+  background-color: #01897C;
+}
+
+@keyframes slidein {
+  from {
+    // margin-left: 100%;
+    width: 0%;
+  }
+
+  to {
+    // margin-left: 0%;
+    width: 70%;
+  }
+}
