@@ -10,6 +10,12 @@ import { FaqComponent } from './faq/faq.component';
 import { EditComponent } from './edit/edit.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material';
+import { MatIconModule} from '@angular/material/icon';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -18,13 +24,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DashboardComponent,
     FaqComponent,
     EditComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

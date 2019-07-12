@@ -1,0 +1,46 @@
+<div style="height:100%">
+  <div class="login-panel">
+    <p>Hi There, Please Login to continue.</p>
+    <div class="form-container">
+      <mat-form-field>
+        <input matInput placeholder="Email or Mobile No." type="text" class="form-text-white">
+      </mat-form-field>
+      <mat-form-field>
+        <input class="form-text-white" matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+        <button class="pwd-visibility-icon" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <button type="button" routerLink="/dashboard" class="btn btn-primary btn-lg" style="background-color: #01897C; border-color: #31EDBE;color: #31EDBE;">Login</button>
+      <div><span class="forgot-password-link">Forgot Password?</span><span class="sign-up-link">Sign Up Now</span></div>
+      <!-- <p class="forgot-password-link">Forgot Password?</p> -->
+      <p class="social-login-label">Social Login</p>
+    </div>
+  </div>
+  <div class="design-panel"></div>
+  <div class="social-login-panel">
+    <div class="container">
+      <div class="row">
+        <div class="col social-login-button-google">
+            <span>google</span>
+        </div>
+        <div class="col social-login-button-fb">
+        <span>facebook</span>
+        </div>
+      </div>
+      <div class="row justify-content-md-center" style="text-align: -webkit-center; margin-top: 14px;">
+          <div class="col" >
+            <button type="button" class="btn btn-primary btn-lg refer-adn-earn-button" >Refer & Earn</button>
+          </div>
+      </div>
+    </div>
+      <!-- <mat-grid-list cols="2" rowHeight="2:1">
+          <mat-grid-tile>
+            <p>asd</p>
+          </mat-grid-tile>
+          <mat-grid-tile>
+
+          </mat-grid-tile>
+        </mat-grid-list> -->
+  </div>
+</div>
