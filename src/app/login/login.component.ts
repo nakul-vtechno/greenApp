@@ -7,11 +7,11 @@ import {MatIconRegistry} from '@angular/material/icon';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.less']
 })
+
 export class LoginComponent implements OnInit {
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) { }
   hide = true;
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 
 }
