@@ -16,12 +16,32 @@
 
 <div [hidden]="!this.navigator.status()">
   <span class="navigator-container">
-      <ul>
-          <li><a routerLink="/dashboard">HOME</a></li>
-          <li><a routerLink="/faq">FAQ</a></li>
-          <li><a routerLink="/edit">EDIT</a></li>
-          <li><a routerLink="/contact">Contact us</a></li>
-        </ul>
+        <mat-list role="list">
+          <mat-list-item role="listitem" routerLink="/dashboard">
+            <span>DASHBOARD</span>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+          <mat-list-item role="listitem" routerLink="/faq">
+            <span>FAQ</span>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+          <mat-list-item role="listitem" routerLink="/edit">
+            <span>EDIT</span>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+          <mat-list-item role="listitem" routerLink="/contact">
+            <span>CONTACT US</span>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+          <mat-list-item role="listitem" routerLink="">
+            <span>LOGIN</span>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+          <mat-list-item role="listitem" routerLink="/signup">
+            <span>SIGN UP</span>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+        </mat-list>
   </span>
   <span (click)="this.navigator.closeNavigator()" class="navigator-empty-space"></span>
 </div>

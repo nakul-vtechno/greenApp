@@ -30,7 +30,14 @@
               Your Keywords
             </div>
             <ul class="list-group list-group-flush">
-              <li *ngFor="let item of keywords; let i = index" style="text-align: -webkit-left;font-size: x-large;font-weight: 700;" [ngClass]="keywordsOption[i] ? 'options-expanded' : 'options-collapsed'" class="list-group-item"><span style="color:#01897C;" [hidden]="keywordsOption[i]">{{item.name}}</span><span style="font-size: 20px;color: white;font-weight: 500;" [hidden]="!keywordsOption[i]">EDIT | SEND | RECEIVE | DELETE</span><span (click)="showOptions(i)" class="item-options">&#9737;&#9737;&#9737;</span></li>
+              <li *ngFor="let item of keywords; let i = index" style="text-align: -webkit-left;font-size: x-large;font-weight: 700;" [ngClass]="keywordsOption[i] ? 'options-expanded' : 'options-collapsed'" class="list-group-item">
+                <span style="color:#01897C;" [hidden]="keywordsOption[i]">{{item.name}}</span>
+                <span style="font-size: 20px;color: white;font-weight: 500;" [hidden]="!keywordsOption[i]">
+                    EDIT | SEND | RECEIVE | DELETE
+
+                </span>
+                <span (click)="showOptions(i)" class="item-options">&#9737;&#9737;&#9737;</span>
+              </li>
               <!-- <li style="text-align: -webkit-left;font-size: x-large;font-weight: 700;" class="list-group-item"><span style="color:forestgreen">{{'+ Create New Keyword'}}</span></li> -->
             </ul>
           </div>

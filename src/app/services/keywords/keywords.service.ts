@@ -10,19 +10,19 @@ export class KeywordsService {
   getAllKeywords() {
     return [{
         id : '1',
-        name : 'TEST1',
+        name : 'RESUME',
         privacy : 'private',
         status : 'active'
       },
       {
         id : '2',
-        name : 'TEST2',
+        name : 'SALES',
         privacy : 'private',
         status : 'active'
       },
       {
         id : '3',
-        name : 'TEST3',
+        name : 'ROCKY',
         privacy : 'private',
         status : 'inactive'
       }];
